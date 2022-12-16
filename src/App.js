@@ -1,25 +1,28 @@
-import logo from './logo.svg';
+import React from "react";
+
 import './App.css';
+import Stars from './components/Stars';
 
 function App() {
+  const items = [
+    {id: 1},
+    {id: 2},
+    {id: 3},
+    {id: 4},
+    {id: 5},
+  ];
+
+  function range(e) {
+    alert(`Вы поставили ${e.currentTarget.id} звезд(ы)`)
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Stars items={items} addStars={range} />
     </div>
   );
 }
+
+
 
 export default App;
