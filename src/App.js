@@ -12,13 +12,10 @@ function App() {
     {id: 5},
   ];
 
-  function range(e) {
-    alert(`Вы поставили ${e.currentTarget.id} звезд(ы)`)
-  }
 
   return (
     <div>
-      <Stars items={items} addStars={range} />
+      <Stars items={items} />
     </div>
   );
 }
